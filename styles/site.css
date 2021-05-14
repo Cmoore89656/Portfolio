@@ -115,7 +115,7 @@ footer {
 
 /* iPads (landscape) ----------- */
 
-@media only screen and (max-device-width: 768px){
+@media only screen and (max-device-width: 850px){
     .logo {
         font-size: 20px;
     }
