@@ -48,13 +48,16 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 10vh;
+    width: 100vw;
     background-color: var(--blue);
 }
 
 .logo {
     color: #fff;
     text-shadow: .1em .1em#333;
+    font-size: 2em;
+    font-weight: 700;
 }
 
 .nav-li {
@@ -85,8 +88,50 @@ nav {
     display: none;
 }
 
+header {
+    height: 100vh;
+
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+header section h1 {
+    margin-top: 3em;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+header section h3{
+    margin-top: 2em;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+#projects {
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0 1em;
+    
+}
+
+#projects div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: auto;
+}
+
+#projects div p{
+    width:45vw;
+}
+
 footer {
-    position: absolute;
+    position: static;
     bottom: 0;
     height: auto;
     width: 100vw;
@@ -95,6 +140,8 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+
 
 
 /* Media Queries */
@@ -119,6 +166,9 @@ footer {
     .logo {
         font-size: 20px;
     }
+    nav {
+        height: 8vh;
+    }
     .nav-li {
         border-top: 2px solid #fff;
         position: absolute;
@@ -126,7 +176,7 @@ footer {
         flex-direction: column;
         align-items: center;
         height: 32vh;
-        top: 8vh;
+        top: 10vh;
         background-color: var(--blue);
         width: 100vw;
         transform: translateX(100%);
@@ -138,6 +188,36 @@ footer {
     .menu {
         display: block;
         cursor: pointer;
+    }
+}
+
+.nav-clicked {
+    transform: translateX(0%);
+}
+
+.toggle .top {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .middle {
+    opacity: 0;
+}
+
+.toggle .bottom {
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+
+/* KeyFrames */
+
+@keyframes showNavLinks {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
@@ -216,32 +296,3 @@ footer {
     /* Styles */
 }
 
-.nav-clicked {
-    transform: translateX(0%);
-}
-
-.toggle .top {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .middle {
-    opacity: 0;
-}
-
-.toggle .bottom {
-    transform: rotate(45deg) translate(-6px, -8px);
-}
-
-
-/* KeyFrames */
-
-@keyframes showNavLinks {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
