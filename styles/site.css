@@ -1,5 +1,3 @@
-/* Variables */
-
 :root {
     --montserrat: 'Montserrat', sans-serif;
     --raleway: 'Raleway', sans-serif;
@@ -91,6 +89,7 @@ footer {
     position: absolute;
     bottom: 0;
     height: auto;
+    width: 100vw;
     background-color: black;
     color: lightgrey;
     text-align: center;
@@ -103,7 +102,20 @@ footer {
 
 /* Smartphones (landscape) ----------- */
 
-@media only screen and (min-width: 321px) {
+ @media only screen and (min-width: 321px) {
+ }
+
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+    /* Styles */
+}
+
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (max-device-width: 768px){
     .logo {
         font-size: 20px;
     }
@@ -129,62 +141,17 @@ footer {
     }
 }
 
-.nav-clicked {
-    transform: translateX(0%);
-}
-
-.toggle .top {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .middle {
-    opacity: 0;
-}
-
-.toggle .bottom {
-    transform: rotate(45deg) translate(-6px, -8px);
-}
-
-
-/* KeyFrames */
-
-@keyframes showNavLinks {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-
-/* Smartphones (portrait) ----------- */
-
-@media only screen and (max-width: 320px) {
-    /* Styles */
-}
-
-
-/* iPads (landscape) ----------- */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    /* Styles */
-}
-
-
-/* iPads (portrait) ----------- */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    /* Styles */
-}
-
-
 /* Desktops and laptops ----------- */
 
 @media only screen and (min-width: 1224px) {
-    /* Styles */
+    .menu {
+        display: none;
+    }
+    .nav-li li{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 
@@ -247,4 +214,34 @@ footer {
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     /* Styles */
+}
+
+.nav-clicked {
+    transform: translateX(0%);
+}
+
+.toggle .top {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .middle {
+    opacity: 0;
+}
+
+.toggle .bottom {
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+
+/* KeyFrames */
+
+@keyframes showNavLinks {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
