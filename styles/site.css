@@ -193,6 +193,7 @@ footer {
         position: absolute;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
         height: 32vh;
         top: 10vh;
