@@ -6,7 +6,6 @@
     --twitter: #1DA1F2;
     --github: #333;
     --linkedin: #0e76a8;
-    --shadow: 1px 1px 2px #333;
 }
 
 
@@ -55,15 +54,14 @@ nav {
 
 .logo {
     color: #fff;
-    text-shadow: var(--shadow);
     font-size: 2em;
     font-weight: 700;
 }
 
 .nav-li {
     display: flex;
-    justify-content: space-around;
-    width: 25%;
+    justify-content: space-between;
+    width: 30%;
 }
 
 .nav-li li {
@@ -72,15 +70,16 @@ nav {
 
 .nav-li a {
     color: #fff;
-    text-shadow: var(--shadow);
     text-decoration: none;
+    padding: 0.1em 1.5em;
+    transition: all 1s ease-out;
 }
 
-.active {
+.nav-li a:hover {
     background-color: white;
     border-radius: 1em;
-    padding: 0.1em 1.5em;
-    color: black;
+    color: var(--blue);
+
 }
 
 .menu div {
@@ -111,7 +110,6 @@ header section h1 {
     margin-top: 2.5em;
     font-weight: 700;
     font-size: 4em;
-    text-shadow: var(--shadow);
 }
 
 header section h3{
@@ -125,7 +123,6 @@ header section h3{
     padding: 1em;
     font-size: 3em;
     color: var(--github);
-    text-shadow: var(--shadow);
 
 }
 
